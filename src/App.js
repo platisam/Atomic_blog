@@ -18,7 +18,12 @@ function App() {
 
   return (
     <section>
-      <button></button>
+      <button
+        onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
+        className="btn-fake-dark-mode"
+      >
+        {isFakeDark ? "☀️" : "🌙"}
+      </button>
     </section>
   );
 }
