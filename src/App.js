@@ -1,4 +1,6 @@
 import { faker } from "@faker-js/faker";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function createRandomPost() {
   return {
@@ -8,7 +10,17 @@ function createRandomPost() {
 }
 
 function App() {
-  return <div className="App">Atomic_blog</div>;
+  const [isFakeDark, setIsFakeDark] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("fake-dark-mode");
+  }, [isFakeDark]);
+
+  return (
+    <section>
+      <button></button>
+    </section>
+  );
 }
 
 export default App;
