@@ -1,3 +1,4 @@
+import Results from "./Results";
 import SearchPosts from "./SearchPosts";
 
 const Header = ({ posts, onClearPosts, searchQuery, setSearchQuery }) => {
@@ -7,6 +8,7 @@ const Header = ({ posts, onClearPosts, searchQuery, setSearchQuery }) => {
         <span>⚛️</span>The Atomic Blog
       </h1>
       <div>
+        <Results posts={posts} />
         <SearchPosts
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
