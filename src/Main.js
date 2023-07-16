@@ -1,4 +1,10 @@
+import Posts from "./Posts";
+
 const Main = ({ posts, onAddPost }) => {
-  return <main></main>;
+  return (
+    <main>
+      <Posts posts={posts} />
+    </main>
+  );
 };
 export default Main;
