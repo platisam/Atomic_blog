@@ -13,6 +13,7 @@ const Header = ({ posts, onClearPosts, searchQuery, setSearchQuery }) => {
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
         />
+        <button onClick={onClearPosts}>Clear posts</button>
       </div>
     </header>
   );
