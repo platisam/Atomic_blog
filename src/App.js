@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { useEffect } from "react";
 import { useState } from "react";
+import Header from "./Header";
 
 function createRandomPost() {
   return {
@@ -46,6 +47,8 @@ function App() {
       >
         {isFakeDark ? "☀️" : "🌙"}
       </button>
+
+      <Header />
     </section>
   );
 }
