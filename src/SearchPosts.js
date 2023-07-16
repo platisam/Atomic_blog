@@ -1,4 +1,10 @@
 const SearchPosts = ({ searchQuery, setSearchQuery }) => {
-  return <input type="text" />;
+  return (
+    <input
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+      placeholder="Search posts..."
+    />
+  );
 };
 export default SearchPosts;
