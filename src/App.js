@@ -14,7 +14,17 @@ function App() {
     Array.from({ length: 30 }, () => createRandomPost())
   );
 
+  const [searchQuery, setSearchQuery] = useState("");
   const [isFakeDark, setIsFakeDark] = useState(false);
+
+  const searchedPosts =
+    searchQuery.length > 0
+      ? posts.filter((post) =>
+          `${post.title} ${post.body}`
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase())
+        )
+      : posts;
 
   useEffect(() => {
     document.documentElement.classList.toggle("fake-dark-mode");
