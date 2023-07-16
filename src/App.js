@@ -2,6 +2,7 @@ import { faker } from "@faker-js/faker";
 import { useEffect } from "react";
 import { useState } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function createRandomPost() {
   return {
@@ -54,6 +55,7 @@ function App() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
       />
+      <Footer />
     </section>
   );
 }
