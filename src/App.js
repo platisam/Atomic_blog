@@ -26,6 +26,14 @@ function App() {
         )
       : posts;
 
+  function handleAddPost(post) {
+    setPosts((posts) => [post, ...posts]);
+  }
+
+  function handleClearPosts() {
+    setPosts([]);
+  }
+
   useEffect(() => {
     document.documentElement.classList.toggle("fake-dark-mode");
   }, [isFakeDark]);
