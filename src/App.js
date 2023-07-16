@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Main from "./Main";
 
 function createRandomPost() {
   return {
@@ -55,6 +56,7 @@ function App() {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
       />
+      <Main posts={searchedPosts} onAddPost={handleAddPost} />
       <Footer />
     </section>
   );
