@@ -4,8 +4,16 @@ const FormAddPost = ({ onAddPost }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!title || !body) return;
+    onAddPost({ title, body });
+    setTitle("");
+    setBody("");
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
