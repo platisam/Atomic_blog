@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({ posts, onClearPosts, searchQuery, setSearchQuery }) => {
   return (
     <header>
       <h1>
