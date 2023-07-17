@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
+import Archive from "./Archive";
 
 function createRandomPost() {
   return {
@@ -57,6 +58,7 @@ function App() {
         setSearchQuery={setSearchQuery}
       />
       <Main posts={searchedPosts} onAddPost={handleAddPost} />
+      <Archive onAddPost={handleAddPost} />
       <Footer />
     </section>
   );
