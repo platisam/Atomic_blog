@@ -1,6 +1,6 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { faker } from "@faker-js/faker";
-import { PostContext } from "./PostContext";
+import { usePosts } from "./PostContext";
 
 function createRandomPost() {
   return {
@@ -10,7 +10,7 @@ function createRandomPost() {
 }
 
 const Archive = () => {
-  const { onAddPost } = useContext(PostContext);
+  const { onAddPost } = usePosts();
 
   const [posts] = useState(() =>
     Array.from({ length: 100 }, () => createRandomPost())

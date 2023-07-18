@@ -1,12 +1,10 @@
 import { faker } from "@faker-js/faker";
-import { useEffect } from "react";
-
 import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
 import Archive from "./Archive";
 import Button from "./Button";
-import { PostProvider, PostContext } from "./PostContext";
+import { PostProvider } from "./PostContext";
 
 function createRandomPost() {
   return {
