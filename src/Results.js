@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { PostContext } from "./PostContext";
 
 const Results = () => {
   const { posts } = useContext(PostContext);

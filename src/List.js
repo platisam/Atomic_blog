@@ -1,7 +1,8 @@
 import { useContext } from "react";
+import { PostContext } from "./PostContext";
 
 const List = () => {
-  const { posts } = useContext();
+  const { posts } = useContext(PostContext);
 
   return (
     <ul>

@@ -1,11 +1,12 @@
 import { faker } from "@faker-js/faker";
-import { createContext, useEffect } from "react";
-import { useState } from "react";
+import { useEffect } from "react";
+
 import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
 import Archive from "./Archive";
 import Button from "./Button";
+import { PostProvider, PostContext } from "./PostContext";
 
 function createRandomPost() {
   return {
@@ -15,25 +16,17 @@ function createRandomPost() {
 }
 
 function App() {
-  /*useEffect(() => {
-    document.documentElement.classList.toggle("fake-dark-mode");
-  }, [isFakeDark]);*/
-
   return (
-    <section>
-      {/*<button
-          onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
-          className="btn-fake-dark-mode"
-        >
-          {isFakeDark ? "☀️" : "🌙"}
-    </button>*/}
-      <Button />
+    <PostProvider>
+      <section>
+        <Button />
 
-      <Header />
-      <Main />
-      <Archive />
-      <Footer />
-    </section>
+        <Header />
+        <Main />
+        <Archive />
+        <Footer />
+      </section>
+    </PostProvider>
   );
 }
 
