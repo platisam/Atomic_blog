@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { faker } from "@faker-js/faker";
 
 function createRandomPost() {
@@ -8,7 +8,9 @@ function createRandomPost() {
   };
 }
 
-const Archive = ({ onAddPost }) => {
+const Archive = () => {
+  const { onAddPost } = useContext();
+
   const [posts] = useState(() =>
     Array.from({ length: 100 }, () => createRandomPost())
   );
