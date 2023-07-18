@@ -17,16 +17,16 @@ function createRandomPost() {
 
 function App() {
   return (
-    <PostProvider>
-      <section>
-        <Button />
+    <section>
+      <Button />
 
+      <PostProvider>
         <Header />
         <Main />
         <Archive />
         <Footer />
-      </section>
-    </PostProvider>
+      </PostProvider>
+    </section>
   );
 }
 
