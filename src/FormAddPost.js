@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-const FormAddPost = ({ onAddPost }) => {
+const FormAddPost = () => {
+  const { onAddPost } = useContext();
+
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 

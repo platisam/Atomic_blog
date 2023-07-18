@@ -1,4 +1,8 @@
-const List = ({ posts }) => {
+import { useContext } from "react";
+
+const List = () => {
+  const { posts } = useContext();
+
   return (
     <ul>
       {posts.map((post, i) => (
