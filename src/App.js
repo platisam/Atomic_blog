@@ -5,6 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
 import Archive from "./Archive";
+import Button from "./Button";
 
 function createRandomPost() {
   return {
@@ -21,7 +22,7 @@ function App() {
   );
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [isFakeDark, setIsFakeDark] = useState(false);
+  //const [isFakeDark, setIsFakeDark] = useState(false);
 
   const searchedPosts =
     searchQuery.length > 0
@@ -40,9 +41,9 @@ function App() {
     setPosts([]);
   }
 
-  useEffect(() => {
+  /*useEffect(() => {
     document.documentElement.classList.toggle("fake-dark-mode");
-  }, [isFakeDark]);
+  }, [isFakeDark]);*/
 
   return (
     <PostContext.Provider
@@ -55,12 +56,13 @@ function App() {
       }}
     >
       <section>
-        <button
+        {/*<button
           onClick={() => setIsFakeDark((isFakeDark) => !isFakeDark)}
           className="btn-fake-dark-mode"
         >
           {isFakeDark ? "☀️" : "🌙"}
-        </button>
+    </button>*/}
+        <Button />
 
         <Header />
         <Main />
